@@ -412,6 +412,75 @@ strong {
 }
 
 /* ===========================
+   Testimonials Section
+   =========================== */
+
+.testimonials-section {
+    background: linear-gradient(180deg, var(--dark-bg-alt) 0%, var(--dark-bg) 100%);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: var(--dark-bg-card);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 4rem;
+    color: var(--orange);
+    opacity: 0.3;
+    line-height: 1;
+    font-family: Georgia, serif;
+}
+
+.testimonial-quote {
+    color: var(--gray-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.testimonial-author strong {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.testimonial-author span {
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+}
+
+/* ===========================
    Pricing Section
    =========================== */
 
@@ -663,13 +732,54 @@ strong {
    =========================== */
 
 .proof-section {
-    background-color: #0a0a0a;
+    background-color: var(--dark-bg);
+}
+
+.proof-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background-color: var(--dark-bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.proof-body {
+    margin-top: 3rem;
 }
 
 .proof-body ul {
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #121212;
+    background-color: var(--dark-bg-card);
     border-radius: 4px;
 }
 
@@ -677,7 +787,7 @@ strong {
     padding: 0.75rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: #e5e5e5;
+    color: var(--gray-light);
 }
 
 .proof-body ul li:before {
@@ -690,11 +800,52 @@ strong {
 }
 
 /* ===========================
+   FAQ Section
+   =========================== */
+
+.faq-section {
+    background: linear-gradient(180deg, var(--dark-bg-alt) 0%, var(--dark-bg) 100%);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background-color: var(--dark-bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--orange);
+}
+
+.faq-question {
+    color: var(--white);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.faq-answer {
+    color: var(--gray-medium);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ===========================
    About Section
    =========================== */
 
 .about-section {
-    background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
 }
 
 .about-body p {
@@ -703,11 +854,64 @@ strong {
 }
 
 /* ===========================
+   Lead Magnet Section
+   =========================== */
+
+.lead-magnet-section {
+    background: linear-gradient(180deg, var(--dark-bg-alt) 0%, var(--dark-bg) 100%);
+}
+
+.lead-magnet-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lead-magnet-subheadline {
+    font-size: 1.25rem;
+    color: var(--gray-medium);
+    margin-bottom: 3rem;
+}
+
+.lead-magnet-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefit-item {
+    background-color: var(--dark-bg-card);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    color: var(--gray-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.lead-magnet-section .btn-secondary {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+}
+
+.lead-magnet-supporting {
+    margin-top: 1.5rem;
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+/* ===========================
    CTA Section
    =========================== */
 
 .cta-section {
-    background-color: #0a0a0a;
+    background-color: var(--dark-bg);
     padding: 10rem 0;
 }
 
@@ -811,13 +1015,31 @@ strong {
 
     .services-grid,
     .process-grid,
-    .who-grid {
+    .who-grid,
+    .testimonials-grid,
+    .pricing-grid,
+    .faq-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .service-card {
+    .service-card,
+    .pricing-card {
         padding: 2rem;
+    }
+
+    .proof-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .lead-magnet-benefits {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .cta-section {
