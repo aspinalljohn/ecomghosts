@@ -647,6 +647,14 @@ strong {
     color: var(--white);
 }
 
+.author-avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--orange-primary);
+}
+
 .author-info {
     flex: 1;
 }
