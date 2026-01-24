@@ -917,18 +917,20 @@ strong {
     color: var(--white);
 }
 
-.about-cta-box {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: var(--dark-bg-card);
-    border-left: 4px solid var(--orange-primary);
-    border-radius: 8px;
-}
 
 .about-image {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.about-headshot {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    border: 4px solid var(--orange-primary);
+    object-fit: cover;
 }
 
 .about-placeholder {
