@@ -506,6 +506,9 @@ strong {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
 }
 
 .service-card-icon:hover {
@@ -523,6 +526,11 @@ strong {
     color: var(--white);
     margin-bottom: 1rem;
     font-size: 1.25rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
 }
 
 .service-card-icon p {
@@ -530,6 +538,7 @@ strong {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .service-link {
