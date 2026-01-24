@@ -443,27 +443,43 @@ strong {
     font-weight: 600;
 }
 
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    align-items: center;
+.logo-scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
-.client-logo {
-    text-align: center;
+.logo-scroll {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.logo-item {
+    flex-shrink: 0;
     color: var(--light-gray);
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
     border: 1px solid var(--border-light);
     border-radius: 8px;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
-.client-logo:hover {
+.logo-item:hover {
     border-color: var(--orange-primary);
     transform: translateY(-2px);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ===========================
@@ -1186,9 +1202,13 @@ strong {
         gap: 1.5rem;
     }
 
-    .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .logo-scroll {
+        animation: scroll 20s linear infinite;
+    }
+
+    .logo-item {
+        font-size: 0.85rem;
+        padding: 0.75rem 1.5rem;
     }
 
     .hero-ctas {
