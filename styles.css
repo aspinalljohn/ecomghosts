@@ -318,103 +318,44 @@ strong {
     align-items: center;
 }
 
-.mockup-placeholder {
+.macbook-mockup {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.mockup-phone {
-    background: linear-gradient(135deg, var(--dark-charcoal) 0%, var(--dark-gray) 100%);
-    border-radius: 40px;
-    padding: 1.5rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+.macbook-screen {
+    background: #1a1a1a;
+    border-radius: 12px 12px 0 0;
+    padding: 12px 12px 0 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid #333;
 }
 
-.phone-screen {
-    background: white;
-    border-radius: 30px;
-    padding: 2rem;
-    min-height: 500px;
+.screen-content {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    background: #000;
 }
 
-.linkedin-post-mockup {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.macbook-bottom {
+    height: 8px;
+    background: linear-gradient(to bottom, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.post-header {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.avatar-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-accent) 100%);
-}
-
-.post-info {
-    flex: 1;
-}
-
-.post-name {
-    width: 120px;
-    height: 14px;
-    background-color: var(--text-dark);
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-}
-
-.post-meta {
-    width: 80px;
-    height: 10px;
-    background-color: var(--text-gray);
-    border-radius: 4px;
-}
-
-.post-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.content-line {
-    height: 12px;
-    background-color: var(--light-gray);
-    border-radius: 4px;
-}
-
-.content-line.short {
-    width: 60%;
-}
-
-.post-metrics {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, var(--orange-primary) 0%, #FFE066 100%);
-    border-radius: 15px;
-}
-
-.metric {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.metric-icon {
-    font-size: 1.5rem;
-}
-
-.metric-value {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--text-dark);
+.macbook-base {
+    height: 4px;
+    background: linear-gradient(to right, transparent 0%, #2a2a2a 10%, #2a2a2a 90%, transparent 100%);
+    margin: 0 auto;
+    width: 120%;
+    position: relative;
+    left: -10%;
+    border-radius: 0 0 100px 100px;
 }
 
 .metric-label {
@@ -1252,12 +1193,11 @@ strong {
         font-size: 2.5rem;
     }
 
-    .mockup-phone {
-        padding: 1rem;
+    .macbook-mockup {
+        max-width: 450px;
     }
 
-    .phone-screen {
-        padding: 1.5rem;
-        min-height: 400px;
+    .macbook-screen {
+        padding: 8px 8px 0 8px;
     }
 }
