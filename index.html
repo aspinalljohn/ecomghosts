@@ -25,7 +25,7 @@
                     <a href="#pricing">Pricing</a>
                     <a href="#process">Process</a>
                     <a href="#about">About</a>
-                    <a href="#contact" class="btn-nav">Get Started</a>
+                    <a href="#pricing" class="btn-nav">Get Started</a>
                 </div>
             </div>
         </div>
@@ -152,15 +152,15 @@
         <div class="container">
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <div class="metric-number">43+</div>
+                    <div class="metric-number" data-target="43">0+</div>
                     <div class="metric-label">Active Clients</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-number">24,000+</div>
+                    <div class="metric-number" data-target="24000">0+</div>
                     <div class="metric-label">Posts Written</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-number">3.2x</div>
+                    <div class="metric-number" data-target="3.2">0x</div>
                     <div class="metric-label">Avg. Engagement Increase</div>
                 </div>
             </div>
@@ -303,11 +303,19 @@
                     <h3>Strategy Session</h3>
                     <p>We map your goals, audience, offers, and positioning to create a content roadmap that aligns with your business objectives.</p>
                 </div>
+                <svg class="process-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10 50 Q 50 10, 90 50" stroke="#ff6b35" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+                    <polygon points="90,50 85,45 85,55" fill="#ff6b35"/>
+                </svg>
                 <div class="process-step-modern">
                     <div class="step-number-circle">2</div>
                     <h3>Voice Lock</h3>
                     <p>We capture your tone, cadence, and point of view through interviews and analysis—so every post sounds like you.</p>
                 </div>
+                <svg class="process-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10 50 Q 50 90, 90 50" stroke="#ff6b35" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+                    <polygon points="90,50 85,45 85,55" fill="#ff6b35"/>
+                </svg>
                 <div class="process-step-modern">
                     <div class="step-number-circle">3</div>
                     <h3>Execution & Iteration</h3>
@@ -372,28 +380,28 @@
         <div class="container">
             <h2 class="section-headline center">Common questions</h2>
             <div class="faq-grid-2">
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">How long until I see results?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>How long until I see results?</h3>
                     <p class="faq-answer-modern">Most clients see increased engagement within 2-3 weeks. Meaningful pipeline impact typically shows in 60-90 days as we build consistency and authority.</p>
                 </div>
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">What if the voice doesn't match?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>What if the voice doesn't match?</h3>
                     <p class="faq-answer-modern">We build a custom style guide through interviews and content analysis. You get unlimited revisions until it sounds exactly like you. Voice match is non-negotiable.</p>
                 </div>
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">How much input do I need to give?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>How much input do I need to give?</h3>
                     <p class="faq-answer-modern">Initial setup requires 2-3 hours. After that, 30-60 minutes per week for feedback and approvals. We handle research, writing, and formatting.</p>
                 </div>
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">Can I pause or cancel?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>Can I pause or cancel?</h3>
                     <p class="faq-answer-modern">Yes. Monthly plans can be paused or cancelled with 30 days notice. We recommend a minimum 90-day commitment to see compounding results.</p>
                 </div>
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">What's the turnaround time?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>What's the turnaround time?</h3>
                     <p class="faq-answer-modern">Posts are delivered 3-5 business days before scheduled publish date. Rush requests available on Growth and Scale plans.</p>
                 </div>
-                <div class="faq-item-modern">
-                    <h3 class="faq-question-modern">Do you write for industries outside eCommerce?</h3>
+                <div class="faq-item-modern" onclick="this.classList.toggle('active')">
+                    <h3 class="faq-question-modern"><span class="faq-icon">+</span>Do you write for industries outside eCommerce?</h3>
                     <p class="faq-answer-modern">No. We only work with eCommerce founders, Amazon operators, and commerce SaaS teams. This specialization is why the content works.</p>
                 </div>
             </div>
@@ -448,8 +456,63 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 EcomGhosts. All rights reserved.</p>
+                <p class="aspi-company">An Aspi Company</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Animated counter for metrics
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const isDecimal = target % 1 !== 0;
+            const suffix = element.textContent.slice(-1);
+            const duration = 2000;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+
+                if (isDecimal) {
+                    element.textContent = current.toFixed(1) + suffix;
+                } else if (target >= 1000) {
+                    element.textContent = Math.floor(current).toLocaleString() + suffix;
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for metrics animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.metric-number[data-target]');
+                    counters.forEach(counter => {
+                        animateCounter(counter);
+                        counter.removeAttribute('data-target'); // Animate only once
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe metrics section
+        const metricsSection = document.querySelector('.metrics-section');
+        if (metricsSection) {
+            observer.observe(metricsSection);
+        }
+    </script>
 </body>
 </html>
