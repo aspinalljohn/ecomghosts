@@ -1,54 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: false
+metaTitle: "EcomGhosts 👻 The #1 LinkedIn Ghostwriting Agency for E-Commerce CEOs & Founders"
+metaDescription: "LinkedIn ghostwriting built for e-commerce founders. We publish content that supports revenue, partnerships, and positioning. Trusted by operators on Amazon, Walmart, Shopify, and more."
+permalink: /
+---
+{% extends "base.njk" %}
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- Page Title -->
-    <title>EcomGhosts 👻 The #1 LinkedIn Ghostwriting Agency for E-Commerce CEOs & Founders</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="LinkedIn ghostwriting built for e-commerce founders. We publish content that supports revenue, partnerships, and positioning. Trusted by operators on Amazon, Walmart, Shopify, and more.">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="EcomGhosts 👻 The #1 LinkedIn Ghostwriting Agency for E-Commerce CEOs & Founders">
-    <meta property="og:description" content="LinkedIn ghostwriting built for e-commerce founders. We publish content that supports revenue, partnerships, and positioning. Trusted by operators on Amazon, Walmart, Shopify, and more.">
-    <meta property="og:url" content="https://ecomghosts.com">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ecomghosts.com/og-image.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#" class="logo">
-                    <span class="ghost-icon">👻</span>
-                    <span class="logo-text">EcomGhosts</span>
-                </a>
-                <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#results">Results</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#process">Process</a>
-                    <a href="#about">About</a>
-                    <a href="#pricing" class="btn-nav">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+{% block content %}
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -61,7 +19,7 @@
                         You think in systems & results. Your LinkedIn should reflect that. We publish content that supports revenue, partnerships, and positioning.
                     </p>
                     <div class="hero-ctas">
-                        <a href="https://cal.com/aspi-creatives/ecomghosts-15?overlayCalendar=true" class="btn-primary" target="_blank">Book a strategy call</a>
+                        <a href="{{ site.social.calendar }}" class="btn-primary" target="_blank">Book a strategy call</a>
                         <a href="#pricing" class="btn-secondary-outline">See pricing</a>
                     </div>
                     <p class="hero-supporting">Built by operators. Run like a system.</p>
@@ -69,7 +27,7 @@
                 <div class="hero-image">
                     <div class="macbook-mockup">
                         <div class="macbook-screen">
-                            <img src="linkedin-analytics.gif" alt="LinkedIn Analytics Dashboard" class="screen-content">
+                            <img src="/img/linkedin-analytics.gif" alt="LinkedIn Analytics Dashboard" class="screen-content">
                         </div>
                         <div class="macbook-bottom"></div>
                         <div class="macbook-base"></div>
@@ -85,25 +43,25 @@
             <p class="social-proof-label">Trusted by eCommerce operators on:</p>
             <div class="logo-scroll-container">
                 <div class="logo-scroll">
-                    <div class="logo-item"><img src="logo-amazon.png" alt="Amazon" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-walmart.png" alt="Walmart" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-tiktok.png" alt="TikTok" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-shopify.png" alt="Shopify" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-target.png" alt="Target" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-homedepot.png" alt="Home Depot" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-instacart.png" alt="Instacart" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-doordash.png" alt="DoorDash" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-ubereats.png" alt="Uber Eats" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-amazon.png" alt="Amazon" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-walmart.png" alt="Walmart" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-tiktok.png" alt="TikTok" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-shopify.png" alt="Shopify" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-target.png" alt="Target" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-homedepot.png" alt="Home Depot" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-instacart.png" alt="Instacart" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-doordash.png" alt="DoorDash" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-ubereats.png" alt="Uber Eats" class="platform-logo"></div>
                     <!-- Duplicate for seamless loop -->
-                    <div class="logo-item"><img src="logo-amazon.png" alt="Amazon" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-walmart.png" alt="Walmart" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-tiktok.png" alt="TikTok" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-shopify.png" alt="Shopify" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-target.png" alt="Target" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-homedepot.png" alt="Home Depot" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-instacart.png" alt="Instacart" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-doordash.png" alt="DoorDash" class="platform-logo"></div>
-                    <div class="logo-item"><img src="logo-ubereats.png" alt="Uber Eats" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-amazon.png" alt="Amazon" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-walmart.png" alt="Walmart" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-tiktok.png" alt="TikTok" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-shopify.png" alt="Shopify" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-target.png" alt="Target" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-homedepot.png" alt="Home Depot" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-instacart.png" alt="Instacart" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-doordash.png" alt="DoorDash" class="platform-logo"></div>
+                    <div class="logo-item"><img src="/img/logo-ubereats.png" alt="Uber Eats" class="platform-logo"></div>
                 </div>
             </div>
         </div>
@@ -118,15 +76,15 @@
                     It's unstructured.
                 </h2>
                 <div class="problem-content">
-                    <p>☒ You post when you remember.<br>
-                    ☒ You write when it feels right.<br>
-                    ☒ You pause when work piles up.</p>
+                    <p>&#9746; You post when you remember.<br>
+                    &#9746; You write when it feels right.<br>
+                    &#9746; You pause when work piles up.</p>
                     <p class="emphasis-text">That is why nothing compounds.</p>
                     <p>Inconsistent posting leads to inconsistent results.</p>
                     <p>Unclear positioning brings the wrong people.<br>
                     Effort without strategy burns time.</p>
                     <p class="emphasis-text large">Ideas are not missing.<br>
-                    ⤷ Structure is.</p>
+                    &#10551; Structure is.</p>
                 </div>
             </div>
         </div>
@@ -138,28 +96,28 @@
             <h2 class="section-headline center white">What we actually do</h2>
             <div class="services-grid-4">
                 <div class="service-card-icon">
-                    <div class="service-icon-large">✍️</div>
+                    <div class="service-icon-large">&#9997;&#65039;</div>
                     <h3>LinkedIn Ghostwriting</h3>
                     <p>We write in your voice. Not ours. Operator-level hooks, native formatting, and tight feedback loops that improve with every post.</p>
-                    <a href="#pricing" class="service-link">Learn more →</a>
+                    <a href="#pricing" class="service-link">Learn more &rarr;</a>
                 </div>
                 <div class="service-card-icon">
-                    <div class="service-icon-large">🎯</div>
+                    <div class="service-icon-large">&#127919;</div>
                     <h3>Positioning & Messaging</h3>
                     <p>Weak positioning kills strong content. We lock in your ICP, authority angles, and what sets you apart in the market.</p>
-                    <a href="#pricing" class="service-link">Learn more →</a>
+                    <a href="#pricing" class="service-link">Learn more &rarr;</a>
                 </div>
                 <div class="service-card-icon">
-                    <div class="service-icon-large">⚙️</div>
+                    <div class="service-icon-large">&#9881;&#65039;</div>
                     <h3>Content<br>Systems</h3>
                     <p>Random posts do not compound. Systems do. You get repeatable frameworks, templates, and workflows that last.</p>
-                    <a href="#pricing" class="service-link">Learn more →</a>
+                    <a href="#pricing" class="service-link">Learn more &rarr;</a>
                 </div>
                 <div class="service-card-icon">
-                    <div class="service-icon-large">📈</div>
+                    <div class="service-icon-large">&#128200;</div>
                     <h3>Performance Tracking</h3>
                     <p>We track signal, not noise. Engagement, profile views, inbound DMs, and pipeline impact.</p>
-                    <a href="#pricing" class="service-link">Learn more →</a>
+                    <a href="#pricing" class="service-link">Learn more &rarr;</a>
                 </div>
             </div>
         </div>
@@ -196,13 +154,13 @@
                         "EcomGhosts helped me go from random posts to a system that actually drives pipeline. I've booked 12 qualified discovery calls in the last 90 days directly from LinkedIn engagement."
                     </p>
                     <div class="testimonial-author-modern">
-                        <img src="marcus-chen.jpg" alt="Marcus Chen" class="author-avatar-img">
+                        <img src="/img/marcus-chen.jpg" alt="Marcus Chen" class="author-avatar-img">
                         <div class="author-info">
                             <div class="author-name">Marcus Chen</div>
                             <div class="author-title">Founder</div>
                         </div>
                     </div>
-                    <img src="proof-marcus.jpg" alt="Marcus Chen Results" class="testimonial-proof" onclick="openLightbox(this.src)">
+                    <img src="/img/proof-marcus.jpg" alt="Marcus Chen Results" class="testimonial-proof" onclick="openLightbox(this.src)">
                 </div>
 
                 <div class="testimonial-card-modern">
@@ -211,13 +169,13 @@
                         "I was skeptical about ghostwriting until I saw the first draft. It sounded exactly like me—but better structured. My engagement rate tripled in 60 days."
                     </p>
                     <div class="testimonial-author-modern">
-                        <img src="sarah-mitchell.jpg" alt="Sarah Mitchell" class="author-avatar-img">
+                        <img src="/img/sarah-mitchell.jpg" alt="Sarah Mitchell" class="author-avatar-img">
                         <div class="author-info">
                             <div class="author-name">Sarah Mitchell</div>
                             <div class="author-title">CEO</div>
                         </div>
                     </div>
-                    <img src="proof-sarah.jpg" alt="Sarah Mitchell Results" class="testimonial-proof" onclick="openLightbox(this.src)">
+                    <img src="/img/proof-sarah.jpg" alt="Sarah Mitchell Results" class="testimonial-proof" onclick="openLightbox(this.src)">
                 </div>
 
                 <div class="testimonial-card-modern">
@@ -226,13 +184,13 @@
                         "The difference? They understand Amazon PPC strategy, listing optimization, and what actually matters to brand owners. Not one post has felt generic or off-brand."
                     </p>
                     <div class="testimonial-author-modern">
-                        <img src="david-knight.jpg" alt="David Knight" class="author-avatar-img">
+                        <img src="/img/david-knight.jpg" alt="David Knight" class="author-avatar-img">
                         <div class="author-info">
                             <div class="author-name">David Knight</div>
                             <div class="author-title">VP Marketing</div>
                         </div>
                     </div>
-                    <img src="proof-david.jpg" alt="David Knight Results" class="testimonial-proof" onclick="openLightbox(this.src)">
+                    <img src="/img/proof-david.jpg" alt="David Knight Results" class="testimonial-proof" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </div>
@@ -355,44 +313,44 @@
             <div class="about-grid">
                 <div class="about-content">
                     <h2 class="section-headline">About EcomGhosts</h2>
-                    <p class="about-intro">EcomGhosts was built inside e‑commerce. Not by career writers. By operators.</p>
+                    <p class="about-intro">EcomGhosts was built inside e-commerce. Not by career writers. By operators.</p>
 
                     <p>I am <strong>John Aspinall</strong>, founder of EcomGhosts.</p>
 
-                    <p>I have spent 20 years in e‑commerce and the last 10 years deep in creative and merchandising. I have worked alongside leading agencies, brand owners, and operators who live and die by revenue, not likes.</p>
+                    <p>I have spent 20 years in e-commerce and the last 10 years deep in creative and merchandising. I have worked alongside leading agencies, brand owners, and operators who live and die by revenue, not likes.</p>
 
                     <p>Three years ago, I tripled down on LinkedIn.<br>
-                    ⤷ Not as a content experiment. As a growth channel.</p>
+                    &#10551; Not as a content experiment. As a growth channel.</p>
 
                     <p class="emphasis-text">I tested everything.</p>
 
-                    <p>□ Post timing.<br>
-                    □ Post structure.<br>
-                    □ Hooks & scroll stops.<br>
-                    □ Polls that drive real conversations.<br>
-                    □ Content designed to create pipeline, not applause.<br>
-                    □ LinkedIn Live events that attract the right audience.</p>
+                    <p>&#9744; Post timing.<br>
+                    &#9744; Post structure.<br>
+                    &#9744; Hooks & scroll stops.<br>
+                    &#9744; Polls that drive real conversations.<br>
+                    &#9744; Content designed to create pipeline, not applause.<br>
+                    &#9744; LinkedIn Live events that attract the right audience.</p>
 
                     <p>What worked stayed.<br>
                     What did not was cut.</p>
 
-                    <p>EcomGhosts exists because most LinkedIn content for e‑commerce leaders misses the mark. It sounds smart but does nothing. It gets engagement but no inbound. It chases vanity metrics instead of business outcomes.</p>
+                    <p>EcomGhosts exists because most LinkedIn content for e-commerce leaders misses the mark. It sounds smart but does nothing. It gets engagement but no inbound. It chases vanity metrics instead of business outcomes.</p>
 
                     <p class="emphasis-text">We write from an operator's seat.</p>
 
-                    <p>✓ We understand how e‑commerce CEOs, founders, and VPs think.<br>
-                    ✓ We know how creative decisions affect merchandising.<br>
-                    ✓ We know how messaging influences trust, deal flow, and brand authority.</p>
+                    <p>&#10003; We understand how e-commerce CEOs, founders, and VPs think.<br>
+                    &#10003; We know how creative decisions affect merchandising.<br>
+                    &#10003; We know how messaging influences trust, deal flow, and brand authority.</p>
 
                     <p>This is not ghostwriting for attention.<br>
-                    This is ghostwriting built to support revenue, partnerships, and long‑term positioning.</p>
+                    This is ghostwriting built to support revenue, partnerships, and long-term positioning.</p>
 
                     <p class="emphasis-text">If your LinkedIn presence does not reflect how you actually operate, EcomGhosts fixes that.</p>
                 </div>
                 <div class="about-image">
-                    <img src="john-aspinall.jpg" alt="John Aspinall" class="about-headshot">
-                    <img src="about-image-2.jpg" alt="About EcomGhosts" class="about-headshot">
-                    <img src="about-image-3.jpg" alt="About EcomGhosts" class="about-headshot">
+                    <img src="/img/john-aspinall.jpg" alt="John Aspinall" class="about-headshot">
+                    <img src="/img/about-image-2.jpg" alt="About EcomGhosts" class="about-headshot">
+                    <img src="/img/about-image-3.jpg" alt="About EcomGhosts" class="about-headshot">
                 </div>
             </div>
         </div>
@@ -437,59 +395,19 @@
             <div class="cta-content-center">
                 <h2 class="section-headline-dark center">Stop treating content like a side task</h2>
                 <p class="cta-subtitle-dark">Build a system that works while you run the business.</p>
-                <a href="https://cal.com/aspi-creatives/ecomghosts-15?overlayCalendar=true" class="btn-primary-dark" target="_blank">Book a Strategy Call</a>
+                <a href="{{ site.social.calendar }}" class="btn-primary-dark" target="_blank">Book a Strategy Call</a>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="ghost-icon">👻</span>
-                        <span>EcomGhosts</span>
-                    </div>
-                    <p class="footer-tagline">LinkedIn ghostwriting for eCommerce operators who want authority that turns into revenue.</p>
-                </div>
-                <div class="footer-links-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">LinkedIn Ghostwriting</a></li>
-                        <li><a href="#services">Positioning & Messaging</a></li>
-                        <li><a href="#services">Content Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="https://linkedin.com/company/ecomghosts" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://cal.com/aspi-creatives/ecomghosts-15?overlayCalendar=true" target="_blank">Book a Call</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 EcomGhosts. All rights reserved.</p>
-                <p class="aspi-company">An Aspi Company</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+{% endblock %}
 
+{% block scripts %}
     <script>
         // Lightbox functions
         function openLightbox(imageSrc) {
@@ -510,7 +428,6 @@
             }, 300);
         }
 
-        // Close on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeLightbox();
@@ -546,7 +463,6 @@
             }, 16);
         }
 
-        // Intersection Observer for metrics animation
         const observerOptions = {
             threshold: 0.3,
             rootMargin: '-100px'
@@ -558,18 +474,16 @@
                     const counters = entry.target.querySelectorAll('.metric-number[data-target]');
                     counters.forEach(counter => {
                         animateCounter(counter);
-                        counter.removeAttribute('data-target'); // Animate only once
+                        counter.removeAttribute('data-target');
                     });
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe metrics section
         const metricsSection = document.querySelector('.metrics-section');
         if (metricsSection) {
             observer.observe(metricsSection);
         }
     </script>
-</body>
-</html>
+{% endblock %}

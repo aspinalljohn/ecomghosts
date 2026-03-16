@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+    <!-- Page Title -->
+    <title>{{ metaTitle or title or site.title }}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ metaDescription or description or site.description }}">
+    <meta name="author" content="{{ author or site.author }}">
+    <meta name="keywords" content="{{ keywords or site.keywords }}">
+    <meta name="robots" content="{{ robots or 'index, follow' }}">
+    <link rel="canonical" href="{{ canonical or (site.url + page.url) }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ ogTitle or metaTitle or title or site.title }}">
+    <meta property="og:description" content="{{ ogDescription or metaDescription or description or site.description }}">
+    <meta property="og:url" content="{{ site.url + page.url }}">
+    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:image" content="{{ ogImage or (site.url + '/img/og-image.png') }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ ogTitle or metaTitle or title or site.title }}">
+    <meta name="twitter:description" content="{{ ogDescription or metaDescription or description or site.description }}">
+    <meta name="twitter:image" content="{{ ogImage or (site.url + '/img/og-image.png') }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.url }}{{ site.logo }}",
+        "description": "{{ site.description }}",
+        "founder": {
+            "@type": "Person",
+            "name": "{{ site.author }}"
+        },
+        "sameAs": [
+            "{{ site.social.linkedin }}",
+            "{{ site.social.linkedinPersonal }}"
+        ],
+        "serviceType": "LinkedIn Ghostwriting",
+        "areaServed": "Worldwide",
+        "priceRange": "$499-$899/mo"
+    }
+    </script>
+
+    <!-- WebSite Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "description": "{{ site.description }}"
+    }
+    </script>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <span class="ghost-icon">👻</span>
+                    <span class="logo-text">EcomGhosts</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/#services">Services</a>
+                    <a href="/#results">Results</a>
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/#process">Process</a>
+                    <a href="/#about">About</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/#pricing" class="btn-nav">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="ghost-icon">👻</span>
+                        <span>EcomGhosts</span>
+                    </div>
+                    <p class="footer-tagline">LinkedIn ghostwriting for eCommerce operators who want authority that turns into revenue.</p>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/#services">LinkedIn Ghostwriting</a></li>
+                        <li><a href="/#services">Positioning & Messaging</a></li>
+                        <li><a href="/#services">Content Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#process">Process</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="{{ site.social.linkedin }}" target="_blank">LinkedIn</a></li>
+                        <li><a href="{{ site.social.calendar }}" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcomGhosts. All rights reserved.</p>
+                <p class="aspi-company">An Aspi Company</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

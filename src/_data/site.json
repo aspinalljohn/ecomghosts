@@ -1,0 +1,16 @@
+{
+  "name": "EcomGhosts",
+  "url": "https://ecomghosts.com",
+  "title": "EcomGhosts 👻 The #1 LinkedIn Ghostwriting Agency for E-Commerce CEOs & Founders",
+  "description": "LinkedIn ghostwriting built for e-commerce founders. We publish content that supports revenue, partnerships, and positioning. Trusted by operators on Amazon, Walmart, Shopify, and more.",
+  "author": "John Aspinall",
+  "email": "john@ecomghosts.com",
+  "logo": "/img/og-image.png",
+  "favicon": "/img/favicon.png",
+  "social": {
+    "linkedin": "https://linkedin.com/company/ecomghosts",
+    "linkedinPersonal": "https://linkedin.com/in/johnaspinall",
+    "calendar": "https://cal.com/aspi-creatives/ecomghosts-15?overlayCalendar=true"
+  },
+  "keywords": "LinkedIn ghostwriting, ecommerce founders, Amazon sellers, LinkedIn content strategy, executive ghostwriting, ecommerce LinkedIn, CEO content, founder personal branding"
+}

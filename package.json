@@ -1,0 +1,12 @@
+{
+  "name": "ecomghosts",
+  "version": "1.0.0",
+  "description": "EcomGhosts — LinkedIn ghostwriting for e-commerce founders",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

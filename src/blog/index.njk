@@ -1,0 +1,107 @@
+---
+layout: false
+metaTitle: "Blog — LinkedIn Ghostwriting for E-Commerce Founders | EcomGhosts"
+metaDescription: "Actionable LinkedIn strategies for e-commerce CEOs, Amazon sellers, and DTC founders. Learn how to turn your LinkedIn into a revenue-driving channel."
+keywords: "LinkedIn ghostwriting blog, ecommerce LinkedIn tips, Amazon seller LinkedIn, founder personal branding, CEO content strategy"
+ogType: "website"
+permalink: /blog/
+---
+{% extends "base.njk" %}
+
+{% block head %}
+<!-- CollectionPage Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "EcomGhosts Blog",
+    "description": "{{ metaDescription }}",
+    "url": "{{ site.url }}/blog/",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {% for post in collections.blog %}
+            {
+                "@type": "ListItem",
+                "position": {{ loop.index }},
+                "url": "{{ site.url }}{{ post.url }}",
+                "name": "{{ post.data.title }}"
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    }
+}
+</script>
+
+<!-- BreadcrumbList Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.url }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "{{ site.url }}/blog/"
+        }
+    ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="blog-hero">
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
+            <span>Blog</span>
+        </nav>
+        <h1 class="blog-hero-title">LinkedIn Strategies for E-Commerce Founders</h1>
+        <p class="blog-hero-subtitle">Operator-level insights on turning LinkedIn into a revenue channel. No fluff. No generic advice. Just what works.</p>
+    </div>
+</section>
+
+<section class="blog-listing section">
+    <div class="container">
+        <div class="blog-grid">
+            {% for post in collections.blog %}
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <time class="blog-card-date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+                    <h2 class="blog-card-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <p class="blog-card-excerpt">{{ post.data.description }}</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-card-reading-time">{{ post.templateContent | readingTime }}</span>
+                        <a href="{{ post.url }}" class="blog-card-link">Read more &rarr;</a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if collections.blog.length == 0 %}
+        <p class="blog-empty">New posts coming soon. Check back shortly.</p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Blog CTA -->
+<section class="cta-section-yellow">
+    <div class="container">
+        <div class="cta-content-center">
+            <h2 class="section-headline-dark center">Want content like this written for you?</h2>
+            <p class="cta-subtitle-dark">We ghostwrite LinkedIn content for e-commerce founders who want authority that converts.</p>
+            <a href="{{ site.social.calendar }}" class="btn-primary-dark" target="_blank">Book a Strategy Call</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+  "layout": "blog-post.njk",
+  "tags": "blog",
+  "author": "John Aspinall",
+  "ogType": "article"
+}
