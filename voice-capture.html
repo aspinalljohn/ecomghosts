@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Page Title -->
+    <title>The Voice Capture Template | EcomGhosts</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The exact process I use before writing a single LinkedIn post for ecommerce founders. 15 questions to extract your authentic voice. Free template from EcomGhosts.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Voice Capture Template | EcomGhosts">
+    <meta property="og:description" content="The exact process I use before writing a single LinkedIn post for ecommerce founders. 15 questions to extract your authentic voice.">
+    <meta property="og:url" content="https://ecomghosts.com/voice-capture">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ecomghosts.com/og-image.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Landing Page Specific Styles */
+        .lp-hero {
+            padding: 10rem 0 4rem;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
+        }
+
+        .lp-hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .lp-hero-content {
+            max-width: 620px;
+        }
+
+        .lp-eyebrow {
+            color: var(--orange-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .lp-headline {
+            font-size: 2.75rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .lp-subheadline {
+            font-size: 1.15rem;
+            color: var(--light-gray);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .lp-proof {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .lp-proof-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--orange-primary);
+            object-fit: cover;
+        }
+
+        .lp-proof-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .lp-proof-text strong {
+            color: var(--light-gray);
+        }
+
+        /* Signup Card */
+        .lp-signup-card {
+            background-color: var(--dark-bg-card);
+            border: 2px solid var(--border-light);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .lp-signup-card:hover {
+            border-color: var(--orange-primary);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.15);
+        }
+
+        .lp-card-badge {
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            background-color: var(--orange-primary);
+            color: var(--white);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .lp-card-title {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .lp-card-desc {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .lp-includes {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .lp-includes li {
+            padding: 0.6rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        .lp-includes li:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--orange-primary);
+            font-weight: bold;
+        }
+
+        /* Substack Embed Styling */
+        .lp-form-container {
+            margin-top: 1.5rem;
+        }
+
+        .lp-form-container iframe {
+            border: none !important;
+            background: transparent !important;
+        }
+
+        .lp-no-spam {
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        /* Problem Section */
+        .lp-problem {
+            background-color: var(--dark-bg);
+            padding: 5rem 0;
+        }
+
+        .lp-problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .lp-problem-card {
+            background-color: var(--dark-bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .lp-problem-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .lp-problem-card h3 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .lp-problem-card p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* What's Inside Section */
+        .lp-inside {
+            background-color: var(--dark-charcoal);
+            padding: 5rem 0;
+        }
+
+        .lp-inside-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .lp-inside-list {
+            list-style: none;
+        }
+
+        .lp-inside-list li {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .lp-inside-list li:last-child {
+            border-bottom: none;
+        }
+
+        .lp-inside-number {
+            color: var(--orange-primary);
+            font-weight: 800;
+            font-size: 1.1rem;
+            min-width: 2rem;
+        }
+
+        .lp-inside-text h4 {
+            color: var(--white);
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .lp-inside-text p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .lp-inside-preview {
+            background-color: var(--dark-bg-card);
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        .lp-preview-label {
+            color: var(--orange-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .lp-preview-question {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .lp-preview-hint {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .lp-preview-example {
+            background-color: var(--dark-bg);
+            border-left: 3px solid var(--orange-primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .lp-preview-example p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .lp-preview-divider {
+            border: none;
+            border-top: 1px solid var(--border-light);
+            margin: 1.5rem 0;
+        }
+
+        /* Who It's For Section */
+        .lp-who {
+            background-color: var(--dark-bg-alt);
+            padding: 5rem 0;
+        }
+
+        .lp-who-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .lp-who-card {
+            background-color: var(--dark-bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        .lp-who-card h3 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .lp-who-card ul {
+            list-style: none;
+        }
+
+        .lp-who-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        .lp-who-yes li:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #22C55E;
+            font-weight: bold;
+        }
+
+        .lp-who-no li:before {
+            content: "\2717";
+            position: absolute;
+            left: 0;
+            color: #EF4444;
+            font-weight: bold;
+        }
+
+        /* Bottom CTA Section */
+        .lp-bottom-cta {
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-hover) 100%);
+            padding: 5rem 0;
+        }
+
+        .lp-bottom-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lp-bottom-cta h2 {
+            color: var(--white);
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .lp-bottom-cta p {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .lp-bottom-form {
+            max-width: 480px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .lp-bottom-form iframe {
+            border: none !important;
+            background: transparent !important;
+        }
+
+        /* Author Section */
+        .lp-author {
+            background-color: var(--dark-bg);
+            padding: 5rem 0;
+        }
+
+        .lp-author-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .lp-author-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--orange-primary);
+            object-fit: cover;
+        }
+
+        .lp-author-photo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--orange-primary);
+            background: linear-gradient(135deg, var(--dark-bg-card) 0%, var(--dark-gray) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .lp-author-name {
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .lp-author-title-text {
+            color: var(--orange-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .lp-author-bio {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .lp-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .lp-hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .lp-proof {
+                justify-content: center;
+            }
+
+            .lp-signup-card {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .lp-inside-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lp-hero {
+                padding: 8rem 0 3rem;
+            }
+
+            .lp-headline {
+                font-size: 2rem;
+            }
+
+            .lp-problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-who-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-author-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .lp-author-photo,
+            .lp-author-photo-placeholder {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <span class="ghost-icon">👻</span>
+                    <span class="logo-text">EcomGhosts</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/#services">Services</a>
+                    <a href="/#results">Results</a>
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/#process">Process</a>
+                    <a href="/#about">About</a>
+                    <a href="/#pricing" class="btn-nav">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="lp-hero">
+        <div class="container">
+            <div class="lp-hero-grid">
+                <div class="lp-hero-content">
+                    <p class="lp-eyebrow">Free Template</p>
+                    <h1 class="lp-headline">The exact process I use before writing a single LinkedIn post for ecommerce founders</h1>
+                    <p class="lp-subheadline">
+                        Most ghostwriting fails because the writer never captured the founder's voice. This is the 15-question template I use with every EcomGhosts client. It takes 30 minutes. It changes everything.
+                    </p>
+                    <div class="lp-proof">
+                        <img src="john-aspinall.jpg" alt="John Aspinall" class="lp-proof-avatar">
+                        <p class="lp-proof-text">
+                            <strong>John Aspinall</strong> grew from 3K to 25K LinkedIn followers using this exact voice-first approach.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-signup-card">
+                    <div class="lp-card-badge">Free Download</div>
+                    <h2 class="lp-card-title">Get the Voice Capture Template</h2>
+                    <p class="lp-card-desc">15 questions. 30 minutes. A documented voice that makes every post sound like you.</p>
+                    <ul class="lp-includes">
+                        <li>15 voice extraction questions with examples</li>
+                        <li>Voice profile summary framework</li>
+                        <li>Instructions for solo use or with a ghostwriter</li>
+                        <li>The same template used by 10+ ecom founders</li>
+                    </ul>
+                    <div class="lp-form-container">
+                        <iframe src="https://johnaspinallsr.substack.com/embed" width="100%" height="150" style="background: transparent;" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <p class="lp-no-spam">No spam. Unsubscribe anytime. You'll also get operator-level LinkedIn insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="lp-problem">
+        <div class="container">
+            <h2 class="section-headline center">Why most ghostwritten content sounds fake</h2>
+            <div class="lp-problem-grid">
+                <div class="lp-problem-card">
+                    <div class="lp-problem-icon">&#9888;</div>
+                    <h3>They skip voice capture</h3>
+                    <p>Most ghostwriters jump straight to writing. No voice interview. No style profiling. No wonder it sounds like a marketing agency wrote it.</p>
+                </div>
+                <div class="lp-problem-card">
+                    <div class="lp-problem-icon">&#9888;</div>
+                    <h3>They don't speak ecom</h3>
+                    <p>A generalist writer doesn't know ACOS from BSR. Your audience can tell when the person behind the post has never managed a listing.</p>
+                </div>
+                <div class="lp-problem-card">
+                    <div class="lp-problem-icon">&#9888;</div>
+                    <h3>They write for engagement, not pipeline</h3>
+                    <p>Viral hooks and motivational fluff might get likes. They don't get you on the shortlist for partnerships, speaking gigs, or inbound deals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="lp-inside">
+        <div class="container">
+            <h2 class="section-headline center white">What's inside the template</h2>
+            <div class="lp-inside-grid">
+                <ul class="lp-inside-list">
+                    <li>
+                        <span class="lp-inside-number">01</span>
+                        <div class="lp-inside-text">
+                            <h4>Expertise Identity</h4>
+                            <p>Define what you should be known for, your credibility number, and the industry frustration that fuels your best content.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="lp-inside-number">02</span>
+                        <div class="lp-inside-text">
+                            <h4>Communication Style</h4>
+                            <p>Map your natural explanation patterns, verbal fingerprints, and tone so content matches how you actually talk.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="lp-inside-number">03</span>
+                        <div class="lp-inside-text">
+                            <h4>Your Stories</h4>
+                            <p>Extract your origin story, key failure, and go-to client example. The raw material for content that connects.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="lp-inside-number">04</span>
+                        <div class="lp-inside-text">
+                            <h4>Your Opinions</h4>
+                            <p>Document your contrarian beliefs, professional hills to die on, and mission. This is where your best content lives.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="lp-inside-number">05</span>
+                        <div class="lp-inside-text">
+                            <h4>Voice Profile Summary</h4>
+                            <p>Compile everything into a one-page voice profile you can tape to your wall or hand to any writer.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="lp-inside-preview">
+                    <p class="lp-preview-label">Sample Question</p>
+                    <p class="lp-preview-question">What have you done more of than almost anyone you know?</p>
+                    <p class="lp-preview-hint">Think in numbers. Accounts managed. Products launched. Revenue generated. Campaigns run.</p>
+                    <div class="lp-preview-example">
+                        <p>"I've reviewed 50,000 listings" hits different than "I'm experienced in Amazon."</p>
+                    </div>
+                    <hr class="lp-preview-divider">
+                    <p class="lp-preview-question">What does your industry get wrong that makes you want to flip a table?</p>
+                    <p class="lp-preview-hint">Be specific. Not "people don't invest in creative."</p>
+                    <div class="lp-preview-example">
+                        <p>"Sellers spend $30K/month on PPC driving traffic to a hero image they spent $50 on."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="lp-who">
+        <div class="container">
+            <h2 class="section-headline center">Is this for you?</h2>
+            <div class="lp-who-grid">
+                <div class="lp-who-card">
+                    <h3>This template is for you if:</h3>
+                    <ul class="lp-who-yes">
+                        <li>You're an ecommerce founder or Amazon operator with deep expertise</li>
+                        <li>You know you should be posting on LinkedIn but can't sustain it</li>
+                        <li>You've hired a ghostwriter before and the content sounded generic</li>
+                        <li>You want to build authority that drives real business outcomes</li>
+                        <li>You're evaluating whether to write your own content or hire help</li>
+                    </ul>
+                </div>
+                <div class="lp-who-card">
+                    <h3>This is NOT for you if:</h3>
+                    <ul class="lp-who-no">
+                        <li>You're looking for viral hooks and engagement hacks</li>
+                        <li>You want motivational or inspirational content templates</li>
+                        <li>You're not in ecommerce (this is built for operators)</li>
+                        <li>You think LinkedIn is just for job seekers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="lp-author">
+        <div class="container">
+            <div class="lp-author-grid">
+                <img src="john-aspinall.jpg" alt="John Aspinall" class="lp-author-photo">
+                <div>
+                    <p class="lp-author-name">John Aspinall</p>
+                    <p class="lp-author-title-text">Founder, EcomGhosts</p>
+                    <p class="lp-author-bio">
+                        20 years in ecommerce. 14,000+ hero images optimized. 50,000+ listings reviewed. Grew from 3,000 to 25,000 LinkedIn followers by narrowing to one niche and posting content that sounds like an operator, not a marketer. Founded EcomGhosts to give ecommerce founders the same system. This template is step one of every client engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="lp-bottom-cta">
+        <div class="container">
+            <div class="lp-bottom-cta-content">
+                <h2>Get the Voice Capture Template</h2>
+                <p>15 questions. 30 minutes. The foundation for LinkedIn content that actually sounds like you.</p>
+                <div class="lp-bottom-form">
+                    <iframe src="https://johnaspinallsr.substack.com/embed" width="100%" height="150" style="background: transparent;" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="ghost-icon">👻</span>
+                        <span>EcomGhosts</span>
+                    </div>
+                    <p class="footer-tagline">LinkedIn ghostwriting for eCommerce operators who want authority that turns into revenue.</p>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/#services">LinkedIn Ghostwriting</a></li>
+                        <li><a href="/#services">Positioning & Messaging</a></li>
+                        <li><a href="/#services">Content Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#process">Process</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://linkedin.com/company/ecomghosts" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://cal.com/aspi-creatives/ecomghosts-15?overlayCalendar=true" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcomGhosts. All rights reserved.</p>
+                <p class="aspi-company">An Aspi Company</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
